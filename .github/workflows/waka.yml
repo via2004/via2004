@@ -34,6 +34,10 @@ jobs:
         uses: anmol098/waka-readme-stats@4db28e08bfd8bac570125799fe1cfdcb23a8c871
         env:
           INPUT_GH_USER: ${{ github.repository_owner }}
+          # Supply the workflow token as a password for the upstream action's git remote.
+          GIT_CONFIG_COUNT: '1'
+          GIT_CONFIG_KEY_0: credential.https://github.com.helper
+          GIT_CONFIG_VALUE_0: '!f() { printf "%s\n" "username=x-access-token" "password=$INPUT_PUSH_TOKEN"; }; f'
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           GH_TOKEN: ${{ github.token }}
