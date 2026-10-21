@@ -1,65 +1,30 @@
 name: Update coding stats
-
 on:
   schedule:
     - cron: '17 0 * * *'
   workflow_dispatch:
-
 permissions:
   contents: write
-
 concurrency:
   group: profile-stats
   cancel-in-progress: false
-
 jobs:
   update-readme:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     steps:
-      - name: Check WakaTime configuration
-        id: config
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Read daily WakaTime summaries
         env:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+        run: python3 scripts/update_stats.py
+      - name: Publish statistics
         run: |
-          if [ -n "$WAKATIME_API_KEY" ]; then
-            echo "ready=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "ready=false" >> "$GITHUB_OUTPUT"
-            echo "WAKATIME_API_KEY is not configured yet. No statistics were published." >> "$GITHUB_STEP_SUMMARY"
+          if git diff --quiet -- README.md; then
+            exit 0
           fi
-
-      - name: Update profile statistics
-        if: steps.config.outputs.ready == 'true'
-        uses: anmol098/waka-readme-stats@4db28e08bfd8bac570125799fe1cfdcb23a8c871
-        env:
-          INPUT_GH_USER: ${{ github.repository_owner }}
-          # Supply the workflow token as a password for the upstream action's git remote.
-          GIT_CONFIG_COUNT: '1'
-          GIT_CONFIG_KEY_0: credential.https://github.com.helper
-          GIT_CONFIG_VALUE_0: '!f() { printf "%s\n" "username=x-access-token" "password=$INPUT_PUSH_TOKEN"; }; f'
-        with:
-          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          GH_TOKEN: ${{ github.token }}
-          PUSH_TOKEN: ${{ github.token }}
-          SHOW_TOTAL_CODE_TIME: 'True'
-          SHOW_AI_CODE_TIME: 'True'
-          SHOW_AI_CODING: 'True'
-          SHOW_LANGUAGE: 'True'
-          SHOW_EDITORS: 'True'
-          SHOW_TIMEZONE: 'True'
-          SHOW_UPDATED_DATE: 'True'
-          SHOW_PROJECTS: 'False'
-          SHOW_OS: 'False'
-          SHOW_COMMIT: 'False'
-          SHOW_DAYS_OF_WEEK: 'False'
-          SHOW_LINES_OF_CODE: 'False'
-          SHOW_LOC_CHART: 'False'
-          SHOW_SHORT_INFO: 'False'
-          SHOW_PROFILE_VIEWS: 'False'
-          SHOW_LANGUAGE_PER_REPO: 'False'
-          MAX_REPOS: '1'
-          LOCALE: en
-          SYMBOL_VERSION: '2'
-          UPDATED_DATE_FORMAT: '%Y-%m-%d %H:%M:%S'
-          COMMIT_MESSAGE: 'chore: update coding activity'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md
+          git commit -m 'chore: update coding activity'
+          git push

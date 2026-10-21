@@ -5,28 +5,42 @@
 最近 7 天的编程活动与 AI 使用统计，由 WakaTime 自动更新。
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-0%20secs-blue?style=flat)
+**最近 7 天（含今天）：2026-10-16 — 2026-10-22 · Asia/Shanghai**
 
-📊 **This Week I Spent My Time On** 
+⏱ 编程活动：**5 小时 44 分钟**
+
+🤖 AI Coding：**5 小时 44 分钟**
+
+✍️ AI 新增 **1,178** 行 · 删除 **2** 行
+
+🧑‍💻 已采集的人工新增 **0** 行 · 删除 **0** 行
+
+🔤 输入 Token：**3,130,114** · 缓存输入：**109,575,168** · 输出：**250,006**
+
+💬 提示次数：**99**
+
+💵 按 Token 估算费用：**$126.80**（非订阅账单）
+
+**语言**
 
 ```text
-🕑︎ Time Zone: Asia/Shanghai
-
-💬 Programming Languages: 
-No Activity Tracked This Week
-
-🔥 Editors: 
-No Activity Tracked This Week
+Other  3 小时 36 分钟  █████████████░░░░░░░ 62.9%
+Go  1 小时 16 分钟  ████░░░░░░░░░░░░░░░░ 22.2%
+Markdown  42 分钟  ██░░░░░░░░░░░░░░░░░░ 12.4%
+YAML  6 分钟  ░░░░░░░░░░░░░░░░░░░░ 1.9%
+C++  1 分钟  ░░░░░░░░░░░░░░░░░░░░ 0.4%
 ```
 
-🤖 **AI Coding This Week** 
+**编辑器 / AI 工具**
 
 ```text
-No AI Coding Activity Tracked This Week
+Codex Vscode  5 小时 41 分钟  ████████████████████ 99.1%
+Cursor  3 分钟  ░░░░░░░░░░░░░░░░░░░░ 0.9%
 ```
 
+<sub>历史回补只涵盖采集器实际读取的记录；此前未安装编辑器采集插件的人工编程活动无法补齐。</sub>
 
- Last Updated on 2026-10-21 15:57:28 UTC
+最后更新：2026-10-22 00:01:30（北京时间）
 <!--END_SECTION:waka-->
 
 <sub>AI 行数为采集到的新增量；AI 用时依照 WakaTime 活动统计口径；费用为估算值。</sub>
