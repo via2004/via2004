@@ -11,6 +11,7 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
+from history import prepare_history
 
 START = '<!--START_SECTION:waka-->'
 END = '<!--END_SECTION:waka-->'
@@ -108,7 +109,14 @@ def main():
     start, end = date_range(now)
     rows = fetch_summaries(key, start, end)
     path = Path(__file__).resolve().parents[1] / 'README.md'
-    updated = replace_section(path.read_text(), render(rows, start, end, now))
+    daily, svg, intro = prepare_history(path.parent, rows, now)
+    updated = replace_section(path.read_text(), intro + '\n' + render(rows, start, end, now))
+    archive = path.parent / 'data' / 'daily-stats.json'
+    asset = path.parent / 'assets' / 'coding-history.svg'
+    archive.parent.mkdir(exist_ok=True)
+    asset.parent.mkdir(exist_ok=True)
+    archive.write_text(json.dumps(daily, ensure_ascii=False, indent=2) + '\n')
+    asset.write_text(svg)
     path.write_text(updated)
     print(f'Updated statistics for {start} through {end}.')
 
