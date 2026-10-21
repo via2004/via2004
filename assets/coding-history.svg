@@ -1,50 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="583" viewBox="0 0 1000 583" role="img" aria-labelledby="title desc">
-<title id="title">AI Coding 历史概览：约 228 小时，171 个活跃日</title>
-<desc id="desc">历史时长由本地日志估算，后续每日数据来自 WakaTime。原始对话和代码未公开。</desc>
-<defs><linearGradient id="bar"><stop stop-color="#58a6ff"/><stop offset="1" stop-color="#70e1bd"/></linearGradient></defs>
-<rect x="1" y="1" width="998" height="581" rx="20" fill="#0d1117" stroke="#30363d"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="440" viewBox="0 0 1000 440" role="img" aria-labelledby="title desc">
+<title id="title">活动时长</title>
+<desc id="desc">横轴为月份，纵轴为活动小时数。历史时长由本地日志估算，后续每日数据来自 WakaTime。</desc>
+<defs><linearGradient id="bar" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#6ddac5"/><stop offset="1" stop-color="#379a91"/></linearGradient></defs>
+<rect x="1" y="1" width="998" height="438" rx="14" fill="#0d1117" stroke="#30363d"/>
 <g font-family="Arial, Noto Sans CJK SC, sans-serif">
-<text x="34" y="42" fill="#70e1bd" font-size="13" letter-spacing="3">AI CODING · HISTORY</text>
-<text x="34" y="78" fill="#f0f6fc" font-size="25" font-weight="700">我的编程足迹</text>
-<text x="966" y="75" fill="#8b949e" text-anchor="end" font-size="14">2026-04-04 — 2026-10-22</text>
-<rect x="34" y="103" width="300" height="111" rx="12" fill="#161b22" stroke="#21262d"/>
-<text x="52" y="132" fill="#8b949e" font-size="13">累计 AI 活动 · 约</text>
-<text x="52" y="186" fill="#f0f6fc" font-size="40" font-weight="700">228<tspan fill="#8b949e" font-size="15"> 小时</tspan></text>
-<rect x="350" y="103" width="300" height="111" rx="12" fill="#161b22" stroke="#21262d"/>
-<text x="368" y="132" fill="#8b949e" font-size="13">有记录的活跃日</text>
-<text x="368" y="186" fill="#f0f6fc" font-size="40" font-weight="700">171<tspan fill="#8b949e" font-size="15"> 天</tspan></text>
-<rect x="666" y="103" width="300" height="111" rx="12" fill="#161b22" stroke="#21262d"/>
-<text x="684" y="132" fill="#8b949e" font-size="13">本次回溯的历史会话</text>
-<text x="684" y="186" fill="#f0f6fc" font-size="40" font-weight="700">93<tspan fill="#8b949e" font-size="15"> 个</tspan></text>
-<text x="34" y="249" fill="#c9d1d9" font-size="14">按月活动时长</text>
-<text x="966" y="249" fill="#8b949e" text-anchor="end" font-size="12">历史为估算值 · 当月持续累计</text>
-<text x="34" y="287" fill="#c9d1d9" font-size="14">2026-04</text>
-<rect x="131" y="270" width="700" height="23" rx="6" fill="#161b22"/>
-<rect x="131" y="270" width="301.60" height="23" rx="6" fill="url(#bar)"/>
-<text x="966" y="287" fill="#c9d1d9" text-anchor="end" font-size="14">约 21.5 小时</text>
-<text x="34" y="326" fill="#c9d1d9" font-size="14">2026-05</text>
-<rect x="131" y="309" width="700" height="23" rx="6" fill="#161b22"/>
-<rect x="131" y="309" width="380.77" height="23" rx="6" fill="url(#bar)"/>
-<text x="966" y="326" fill="#c9d1d9" text-anchor="end" font-size="14">约 27.1 小时</text>
-<text x="34" y="365" fill="#c9d1d9" font-size="14">2026-06</text>
-<rect x="131" y="348" width="700" height="23" rx="6" fill="#161b22"/>
-<rect x="131" y="348" width="242.84" height="23" rx="6" fill="url(#bar)"/>
-<text x="966" y="365" fill="#c9d1d9" text-anchor="end" font-size="14">约 17.3 小时</text>
-<text x="34" y="404" fill="#c9d1d9" font-size="14">2026-07</text>
-<rect x="131" y="387" width="700" height="23" rx="6" fill="#161b22"/>
-<rect x="131" y="387" width="427.58" height="23" rx="6" fill="url(#bar)"/>
-<text x="966" y="404" fill="#c9d1d9" text-anchor="end" font-size="14">约 30.4 小时</text>
-<text x="34" y="443" fill="#c9d1d9" font-size="14">2026-08</text>
-<rect x="131" y="426" width="700" height="23" rx="6" fill="#161b22"/>
-<rect x="131" y="426" width="700.00" height="23" rx="6" fill="url(#bar)"/>
-<text x="966" y="443" fill="#c9d1d9" text-anchor="end" font-size="14">约 49.8 小时</text>
-<text x="34" y="482" fill="#c9d1d9" font-size="14">2026-09</text>
-<rect x="131" y="465" width="700" height="23" rx="6" fill="#161b22"/>
-<rect x="131" y="465" width="633.57" height="23" rx="6" fill="url(#bar)"/>
-<text x="966" y="482" fill="#c9d1d9" text-anchor="end" font-size="14">约 45.1 小时</text>
-<text x="34" y="521" fill="#c9d1d9" font-size="14">2026-10</text>
-<rect x="131" y="504" width="700" height="23" rx="6" fill="#161b22"/>
-<rect x="131" y="504" width="518.25" height="23" rx="6" fill="url(#bar)"/>
-<text x="966" y="521" fill="#c9d1d9" text-anchor="end" font-size="14">约 36.9 小时</text>
-<text x="34" y="564" fill="#8b949e" font-size="12">本地历史日志 + 每日统计归档 · 最后更新 2026-10-22 00:10（北京时间）</text>
+<text x="32" y="48" fill="#e6edf3" font-size="24" font-weight="600">活动时长</text>
+<text x="38" y="88" fill="#8b949e" font-size="12">小时</text>
+<line x1="76" y1="360.00" x2="964" y2="360.00" stroke="#21262d"/>
+<text x="58" y="364.00" fill="#8b949e" text-anchor="end" font-size="12">0</text>
+<line x1="76" y1="308.40" x2="964" y2="308.40" stroke="#21262d"/>
+<text x="58" y="312.40" fill="#8b949e" text-anchor="end" font-size="12">10</text>
+<line x1="76" y1="256.80" x2="964" y2="256.80" stroke="#21262d"/>
+<text x="58" y="260.80" fill="#8b949e" text-anchor="end" font-size="12">20</text>
+<line x1="76" y1="205.20" x2="964" y2="205.20" stroke="#21262d"/>
+<text x="58" y="209.20" fill="#8b949e" text-anchor="end" font-size="12">30</text>
+<line x1="76" y1="153.60" x2="964" y2="153.60" stroke="#21262d"/>
+<text x="58" y="157.60" fill="#8b949e" text-anchor="end" font-size="12">40</text>
+<line x1="76" y1="102.00" x2="964" y2="102.00" stroke="#21262d"/>
+<text x="58" y="106.00" fill="#8b949e" text-anchor="end" font-size="12">50</text>
+<rect x="108.43" y="249.23" width="62.00" height="110.77" rx="5" fill="url(#bar)"/>
+<text x="139.43" y="237.23" fill="#c9d1d9" text-anchor="middle" font-size="14" font-weight="500">21.5</text>
+<text x="139.43" y="388" fill="#8b949e" text-anchor="middle" font-size="13">2026-04</text>
+<rect x="235.29" y="220.16" width="62.00" height="139.84" rx="5" fill="url(#bar)"/>
+<text x="266.29" y="208.16" fill="#c9d1d9" text-anchor="middle" font-size="14" font-weight="500">27.1</text>
+<text x="266.29" y="388" fill="#8b949e" text-anchor="middle" font-size="13">2026-05</text>
+<rect x="362.14" y="270.81" width="62.00" height="89.19" rx="5" fill="url(#bar)"/>
+<text x="393.14" y="258.81" fill="#c9d1d9" text-anchor="middle" font-size="14" font-weight="500">17.3</text>
+<text x="393.14" y="388" fill="#8b949e" text-anchor="middle" font-size="13">2026-06</text>
+<rect x="489.00" y="202.97" width="62.00" height="157.03" rx="5" fill="url(#bar)"/>
+<text x="520.00" y="190.97" fill="#c9d1d9" text-anchor="middle" font-size="14" font-weight="500">30.4</text>
+<text x="520.00" y="388" fill="#8b949e" text-anchor="middle" font-size="13">2026-07</text>
+<rect x="615.86" y="102.92" width="62.00" height="257.08" rx="5" fill="url(#bar)"/>
+<text x="646.86" y="90.92" fill="#c9d1d9" text-anchor="middle" font-size="14" font-weight="500">49.8</text>
+<text x="646.86" y="388" fill="#8b949e" text-anchor="middle" font-size="13">2026-08</text>
+<rect x="742.71" y="127.31" width="62.00" height="232.69" rx="5" fill="url(#bar)"/>
+<text x="773.71" y="115.31" fill="#c9d1d9" text-anchor="middle" font-size="14" font-weight="500">45.1</text>
+<text x="773.71" y="388" fill="#8b949e" text-anchor="middle" font-size="13">2026-09</text>
+<rect x="869.57" y="169.67" width="62.00" height="190.33" rx="5" fill="url(#bar)"/>
+<text x="900.57" y="157.67" fill="#c9d1d9" text-anchor="middle" font-size="14" font-weight="500">36.9</text>
+<text x="900.57" y="388" fill="#8b949e" text-anchor="middle" font-size="13">2026-10</text>
+<text x="520.00" y="422" fill="#8b949e" text-anchor="middle" font-size="12">月份</text>
 </g></svg>
