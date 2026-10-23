@@ -78,16 +78,29 @@
     "ai_seconds": 6318.549
   },
   "2026-10-22": {
-    "total_seconds": 2132.225,
+    "total_seconds": 2758.581,
     "ai_additions": 455,
     "ai_deletions": 0,
-    "human_additions": 0,
-    "human_deletions": 0,
-    "ai_input_tokens": 196894,
-    "ai_cached_input_tokens": 9776896,
-    "ai_output_tokens": 42384,
-    "ai_prompt_events_total": 5,
-    "ai_model_total_cost": 13.865036,
-    "ai_seconds": 1247.371
+    "human_additions": 1,
+    "human_deletions": 1,
+    "ai_input_tokens": 234885,
+    "ai_cached_input_tokens": 10244096,
+    "ai_output_tokens": 44516,
+    "ai_prompt_events_total": 11,
+    "ai_model_total_cost": 14.818746,
+    "ai_seconds": 1692.238
+  },
+  "2026-10-23": {
+    "total_seconds": 628.131,
+    "ai_additions": 0,
+    "ai_deletions": 0,
+    "human_additions": 37,
+    "human_deletions": 1,
+    "ai_input_tokens": 16940,
+    "ai_cached_input_tokens": 117632,
+    "ai_output_tokens": 1093,
+    "ai_prompt_events_total": 4,
+    "ai_model_total_cost": 0.341682,
+    "ai_seconds": 536.557
   }
 }
