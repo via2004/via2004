@@ -117,16 +117,29 @@
     "ai_seconds": 7484.613
   },
   "2026-10-25": {
-    "total_seconds": 2591.098,
+    "total_seconds": 8164.577,
+    "ai_additions": 0,
+    "ai_deletions": 4,
+    "human_additions": 352,
+    "human_deletions": 242,
+    "ai_input_tokens": 251686,
+    "ai_cached_input_tokens": 2571392,
+    "ai_output_tokens": 9224,
+    "ai_prompt_events_total": 18,
+    "ai_model_total_cost": 5.549452,
+    "ai_seconds": 6831.959
+  },
+  "2026-10-26": {
+    "total_seconds": 0.0,
     "ai_additions": 0,
     "ai_deletions": 0,
-    "human_additions": 122,
-    "human_deletions": 26,
-    "ai_input_tokens": 37807,
-    "ai_cached_input_tokens": 386944,
-    "ai_output_tokens": 2612,
-    "ai_prompt_events_total": 2,
-    "ai_model_total_cost": 0.895614,
-    "ai_seconds": 2536.941
+    "human_additions": 0,
+    "human_deletions": 0,
+    "ai_input_tokens": 0,
+    "ai_cached_input_tokens": 0,
+    "ai_output_tokens": 0,
+    "ai_prompt_events_total": 0,
+    "ai_model_total_cost": 0,
+    "ai_seconds": 0
   }
 }
