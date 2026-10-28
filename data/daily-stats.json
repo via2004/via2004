@@ -154,5 +154,18 @@
     "ai_prompt_events_total": 0,
     "ai_model_total_cost": 0,
     "ai_seconds": 0
+  },
+  "2026-10-28": {
+    "total_seconds": 0.0,
+    "ai_additions": 0,
+    "ai_deletions": 0,
+    "human_additions": 0,
+    "human_deletions": 0,
+    "ai_input_tokens": 0,
+    "ai_cached_input_tokens": 0,
+    "ai_output_tokens": 0,
+    "ai_prompt_events_total": 0,
+    "ai_model_total_cost": 0,
+    "ai_seconds": 0
   }
 }
