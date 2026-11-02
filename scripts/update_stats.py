@@ -15,6 +15,7 @@ from history import prepare_history
 START = '<!--START_SECTION:waka-->'
 END = '<!--END_SECTION:waka-->'
 TIMEZONE = ZoneInfo('Asia/Shanghai')
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def read_access_token(environ):
@@ -66,7 +67,7 @@ def clean(text):
     return str(text).replace('`', '').replace('\n', ' ').replace('\r', ' ')[:60]
 
 
-def render(rows, start, end, now):
+def render(rows, start, end, now, local_activity=None, fetched_at=None):
     totals = defaultdict(float)
     groups = {key: defaultdict(float) for key in ('languages', 'editors', 'categories')}
     fields = ('total_seconds', 'ai_additions', 'ai_deletions', 'human_additions',
@@ -91,6 +92,14 @@ def render(rows, start, end, now):
              f'🔤 输入 Token：**{int(totals["ai_input_tokens"]):,}** · 缓存输入：**{int(totals["ai_cached_input_tokens"]):,}** · 输出：**{int(totals["ai_output_tokens"]):,}**', '',
              f'💬 提示次数：**{int(totals["ai_prompt_events_total"]):,}**', '',
              f'💵 按 Token 估算费用：**${totals["ai_model_total_cost"]:,.2f}**（非订阅账单）', '']
+    if local_activity:
+        current_start, current_end = date_range(now)
+        local_seconds = sum(v['estimated_ai_seconds'] for day, v in local_activity['days'].items()
+                            if str(current_start) <= day <= str(current_end))
+        lines[:6] = [f'**最近 7 天（含今天）：{current_start} — {current_end} · Asia/Shanghai**', '',
+                     f'⏱ AI 活动时长（本地日志估算）：**{duration(local_seconds)}**', '',
+                     '**WakaTime 采集明细**', '',
+                     f'<sub>以下行数、Token 和费用仅覆盖 WakaTime 识别到的活动，可能漏掉续接日志。明细日期：{start} — {end}；采集更新：{fetched_at or "未知"}。</sub>', '']
     for title, key in [('语言', 'languages'), ('编辑器 / AI 工具', 'editors')]:
         ranked = sorted(groups[key].items(), key=lambda x: (-x[1], x[0]))[:5]
         if ranked:
@@ -101,7 +110,7 @@ def render(rows, start, end, now):
                 bar = '█' * round(percent / 5) + '░' * (20-round(percent / 5))
                 lines.append(f'{clean(name)}  {duration(seconds)}  {bar} {percent:.1f}%')
             lines += ['```', '']
-    lines += ['<sub>历史回补只涵盖采集器实际读取的记录；此前未安装编辑器采集插件的人工编程活动无法补齐。</sub>', '',
+    lines += ['<sub>此前未安装编辑器采集插件的人工编程活动无法补齐。</sub>', '',
               f'最后更新：{now.astimezone(TIMEZONE):%Y-%m-%d %H:%M:%S}（北京时间）']
     return '\n'.join(lines)
 
@@ -114,20 +123,54 @@ def replace_section(original, block):
     return before + START + '\n' + block + '\n' + END + after
 
 
+def sanitized_rows(rows):
+    # Only aggregate dimensions are published; never retain project or machine identifiers.
+    result = []
+    fields = ('total_seconds', 'ai_additions', 'ai_deletions', 'human_additions',
+              'human_deletions', 'ai_input_tokens', 'ai_cached_input_tokens',
+              'ai_output_tokens', 'ai_prompt_events_total', 'ai_model_total_cost')
+    for row in rows:
+        result.append({'range': {'date': row['range']['date']},
+                       'grand_total': {k: row['grand_total'].get(k, 0) for k in fields},
+                       **{group: [{'name': x['name'], 'total_seconds': x['total_seconds']}
+                                  for x in row.get(group, [])]
+                          for group in ('categories', 'languages', 'editors')}})
+    return result
+
+
 def main():
-    token = read_access_token(os.environ)
     now = datetime.now(TIMEZONE)
     start, end = date_range(now)
-    rows = fetch_summaries(token, start, end)
-    path = Path(__file__).resolve().parents[1] / 'README.md'
+    cache_path = ROOT / 'data' / 'wakatime-week.json'
+    cache = None
+    fresh = False
+    try:
+        token = read_access_token(os.environ)
+        rows = fetch_summaries(token, start, end)
+        cache = {'start': str(start), 'end': str(end), 'fetched_at': now.strftime('%Y-%m-%d %H:%M:%S %Z'),
+                 'rows': sanitized_rows(rows)}
+        fresh = True
+    except (HTTPError, URLError, ValueError) as error:
+        if not cache_path.exists():
+            raise
+        code = f'HTTP {error.code}' if isinstance(error, HTTPError) else type(error).__name__
+        print(f'::warning::WakaTime {code}; retaining its previous details while updating local activity.')
+        cache = json.loads(cache_path.read_text())
+        start, end = cache['start'], cache['end']
+    rows = cache['rows']
+    path = ROOT / 'README.md'
+    local_path = ROOT / 'data' / 'codex-activity.json'
+    local = json.loads(local_path.read_text()) if local_path.exists() else None
     daily, svg, intro = prepare_history(path.parent, rows, now)
-    updated = replace_section(path.read_text(), intro + '\n' + render(rows, start, end, now))
+    updated = replace_section(path.read_text(), intro + '\n' + render(rows, start, end, now, local, cache['fetched_at']))
     archive = path.parent / 'data' / 'daily-stats.json'
     asset = path.parent / 'assets' / 'coding-history.svg'
     archive.parent.mkdir(exist_ok=True)
     asset.parent.mkdir(exist_ok=True)
     archive.write_text(json.dumps(daily, ensure_ascii=False, indent=2) + '\n')
     asset.write_text(svg)
+    if fresh:
+        cache_path.write_text(json.dumps(cache, ensure_ascii=False, indent=2) + '\n')
     path.write_text(updated)
     print(f'Updated statistics for {start} through {end}.')
 

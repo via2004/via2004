@@ -23,6 +23,9 @@ def archive_days(existing, rows):
 
 
 def combined_days(baseline, daily):
+    if baseline.get('schema_version') == 2:
+        # Ongoing local collector is authoritative; do not add an overlapping service duration.
+        return {day: value['estimated_ai_seconds'] for day, value in sorted(baseline['days'].items())}
     # Keep the local estimate and the daily service statistics disjoint by date.
     cutoff = baseline['cutoff_exclusive']
     result = {day: value['estimated_ai_seconds'] for day, value in baseline['days'].items()
@@ -63,7 +66,7 @@ def history_svg(baseline, daily, now):
     year_label = first[:4] if single_year else first[:4] + '—' + now.strftime('%Y')
     parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">',
              '<title id="title">活动时长</title>',
-             '<desc id="desc">横轴为月份，纵轴为活动小时数。历史时长由本地日志估算，后续每日数据来自 WakaTime。</desc>',
+             '<desc id="desc">横轴为月份，纵轴为 AI 活动小时数。合并本地 Codex 全部日志片段，按活动间隔估算，并行时段去重。</desc>',
              f'<rect width="{width}" height="{height}" fill="#0d1117"/>',
              '<g font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial, Noto Sans CJK SC, sans-serif">',
              '<text x="30" y="41" fill="#dce1e7" font-size="20" font-weight="500">活动时长</text>',
@@ -97,12 +100,13 @@ def history_block(baseline):
     return '\n'.join([
         '![按月活动时长](assets/coding-history.svg)', '',
         '<details><summary>统计口径与历史数据</summary>', '',
-        f'历史记录：**{min(days)} — {max(days)}**。按本地 Codex 日志估算；之后的活动按天保存，持续累计。', '',
+        f'本地日志记录：**{min(days)} — {max(days)}**。历史与新增数据使用相同的 AI 活动时长估算方法。', '',
         '- 合并同一会话的所有日志片段；相邻活动间隔不超过 15 分钟时计入时长，并行会话的重叠时间只算一次。',
         '- 此历史时长为活动估算，不代表精确工时；没有日志的时段不推算。',
-        '- 从历史回溯截止日之后接入 WakaTime 每日统计，两段按日期分开，不重复相加。',
+        '- 本机在线时每 15 分钟合并日志并同步汇总；同步后自动刷新主页。不会把 WakaTime 时长再次相加。',
+        '- 不包括未留下活动记录的查资料、思考等时间；本机离线期间主页保持上次同步值。',
         '- 旧日志不用于推算此前未采集的人工编程时间。',
-        '- [历史汇总](data/history-baseline.json) · [每日统计归档](data/daily-stats.json)', '',
+        '- [本地活动汇总](data/codex-activity.json) · [WakaTime 采集归档](data/daily-stats.json)', '',
         '</details>', '', '### 最近活动', '',
     ])
 
@@ -111,6 +115,8 @@ def prepare_history(root, rows, now):
     path = root / 'data' / 'daily-stats.json'
     existing = json.loads(path.read_text()) if path.exists() else {}
     daily = archive_days(existing, rows)
-    baseline_path = root / 'data' / 'history-baseline.json'
+    baseline_path = root / 'data' / 'codex-activity.json'
+    if not baseline_path.exists():
+        baseline_path = root / 'data' / 'history-baseline.json'
     baseline = json.loads(baseline_path.read_text())
     return daily, history_svg(baseline, daily, now), history_block(baseline)

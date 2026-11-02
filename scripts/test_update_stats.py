@@ -1,4 +1,7 @@
 import unittest
+import tempfile
+from pathlib import Path
+import json
 from datetime import datetime, date, timezone
 from unittest.mock import patch, MagicMock
 from urllib.error import HTTPError
@@ -26,12 +29,32 @@ class StatisticsTests(unittest.TestCase):
         self.assertNotIn('waka_tok_test', request.full_url)
 
     def test_permission_denied_preserves_all_generated_files(self):
-        with patch.dict('os.environ', {'WAKATIME_ACCESS_TOKEN': 'waka_tok_test'}), \
+        with tempfile.TemporaryDirectory() as tmp, patch('update_stats.ROOT', Path(tmp)), \
+             patch.dict('os.environ', {'WAKATIME_ACCESS_TOKEN': 'waka_tok_test'}), \
              patch('update_stats.urlopen', side_effect=HTTPError('https://api.wakatime.com', 403, 'Forbidden', {}, None)), \
              patch('update_stats.Path.write_text') as write:
             with self.assertRaises(HTTPError):
                 main()
             write.assert_not_called()
+
+    def test_cached_wakatime_failure_still_updates_local_time(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / 'data').mkdir()
+            (root / 'README.md').write_text(START + '\nold\n' + END)
+            cache = {'start': '2026-11-01', 'end': '2026-11-01', 'fetched_at': 'old-fetch',
+                     'rows': [{'range': {'date': '2026-11-01'}, 'grand_total': {}}]}
+            (root / 'data/wakatime-week.json').write_text(json.dumps(cache))
+            local = {'schema_version': 2, 'days': {'2026-11-01': {'estimated_ai_seconds': 7786}}}
+            (root / 'data/codex-activity.json').write_text(json.dumps(local))
+            with patch('update_stats.ROOT', root), \
+                 patch.dict('os.environ', {'WAKATIME_ACCESS_TOKEN': 'waka_tok_test'}), \
+                 patch('update_stats.urlopen', side_effect=HTTPError('https://api.wakatime.com', 403, 'Forbidden', {}, None)), \
+                 patch('update_stats.prepare_history', return_value=({}, '<svg/>', 'local history\n')):
+                main()
+            self.assertIn('本地日志估算', (root / 'README.md').read_text())
+            self.assertIn('old-fetch', (root / 'README.md').read_text())
+            self.assertEqual(json.loads((root / 'data/wakatime-week.json').read_text()), cache)
 
     def test_seven_days_include_shanghai_today_at_utc_boundary(self):
         start, end = date_range(datetime(2026, 10, 21, 16, 1, tzinfo=timezone.utc))

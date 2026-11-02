@@ -25,9 +25,8 @@ def merge_intervals(intervals):
     return merged
 
 
-def summarize(root, cutoff):
+def read_sessions(root):
     sessions = defaultdict(set)
-    counts = defaultdict(int)
     files = list((root / 'sessions').rglob('*.jsonl'))
     files += list((root / 'archived_sessions').rglob('*.jsonl'))
     skipped = 0
@@ -57,12 +56,20 @@ def summarize(root, cutoff):
                     stamp = datetime.fromisoformat(record['timestamp'].replace('Z', '+00:00'))
                     if stamp.tzinfo is None:
                         continue
-                    if stamp.astimezone(TZ).date() >= cutoff:
+                    if stamp > datetime.now(timezone.utc):
                         continue
                     sessions[session_id].add(stamp.timestamp())
                 except (ValueError, KeyError, TypeError):
                     skipped += 1
 
+    return sessions, len(files), skipped
+
+
+def summarize_sessions(sessions, cutoff, source_files, skipped):
+    sessions = {sid: {t for t in points if datetime.fromtimestamp(t, TZ).date() < cutoff}
+                for sid, points in sessions.items()}
+    sessions = {sid: points for sid, points in sessions.items() if points}
+    counts = defaultdict(int)
     active_sessions = defaultdict(set)
     intervals = []
     for sid, stamps in sessions.items():
@@ -92,11 +99,16 @@ def summarize(root, cutoff):
         'snapshot_at': datetime.now(timezone.utc).isoformat(),
         'cutoff_exclusive': cutoff.isoformat(),
         'method': 'Local Codex activity estimate: merge every log fragment by session ID; deduplicate timestamps; connect adjacent activity within 15 minutes; union overlapping sessions. Excludes internal subagents. Not a precise work-time measurement.',
-        'source_files': len(files),
+        'source_files': source_files,
         'unique_sessions': len(sessions),
         'unreadable_records': skipped,
         'days': days,
     }
+
+
+def summarize(root, cutoff):
+    sessions, source_files, skipped = read_sessions(root)
+    return summarize_sessions(sessions, cutoff, source_files, skipped)
 
 
 def main():

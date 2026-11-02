@@ -1,40 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="330" viewBox="0 0 1000 330" role="img" aria-labelledby="title desc">
 <title id="title">活动时长</title>
-<desc id="desc">横轴为月份，纵轴为活动小时数。历史时长由本地日志估算，后续每日数据来自 WakaTime。</desc>
+<desc id="desc">横轴为月份，纵轴为 AI 活动小时数。合并本地 Codex 全部日志片段，按活动间隔估算，并行时段去重。</desc>
 <rect width="1000" height="330" fill="#0d1117"/>
 <g font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial, Noto Sans CJK SC, sans-serif">
 <text x="30" y="41" fill="#dce1e7" font-size="20" font-weight="500">活动时长</text>
 <text x="970" y="40" fill="#8b949e" font-size="12" text-anchor="end">2026 · 小时</text>
 <line x1="64" y1="274.00" x2="970" y2="274.00" stroke="#252c34" stroke-width="0.7"/>
 <text x="42" y="278.00" fill="#727d88" text-anchor="end" font-size="11">0</text>
-<line x1="64" y1="213.33" x2="970" y2="213.33" stroke="#252c34" stroke-width="0.7"/>
-<text x="42" y="217.33" fill="#727d88" text-anchor="end" font-size="11">20</text>
-<line x1="64" y1="152.67" x2="970" y2="152.67" stroke="#252c34" stroke-width="0.7"/>
-<text x="42" y="156.67" fill="#727d88" text-anchor="end" font-size="11">40</text>
+<line x1="64" y1="183.00" x2="970" y2="183.00" stroke="#252c34" stroke-width="0.7"/>
+<text x="42" y="187.00" fill="#727d88" text-anchor="end" font-size="11">50</text>
 <line x1="64" y1="92.00" x2="970" y2="92.00" stroke="#252c34" stroke-width="0.7"/>
-<text x="42" y="96.00" fill="#727d88" text-anchor="end" font-size="11">60</text>
-<path d="M 101.62,274 V 211.89 Q 101.62,208.89 104.62,208.89 H 136.62 Q 139.62,208.89 139.62,211.89 V 274 Z" fill="#82909e"><title>2026-04：21.5 小时</title></path>
-<text x="120.62" y="198.89" fill="#8b97a3" text-anchor="middle" font-size="12">21.5</text>
+<text x="42" y="96.00" fill="#727d88" text-anchor="end" font-size="11">100</text>
+<path d="M 101.62,274 V 237.93 Q 101.62,234.93 104.62,234.93 H 136.62 Q 139.62,234.93 139.62,237.93 V 274 Z" fill="#82909e"><title>2026-04：21.5 小时</title></path>
+<text x="120.62" y="224.93" fill="#8b97a3" text-anchor="middle" font-size="12">21.5</text>
 <text x="120.62" y="301" fill="#8b97a3" text-anchor="middle" font-size="12">4月</text>
-<path d="M 214.88,274 V 194.79 Q 214.88,191.79 217.88,191.79 H 249.88 Q 252.88,191.79 252.88,194.79 V 274 Z" fill="#82909e"><title>2026-05：27.1 小时</title></path>
-<text x="233.88" y="181.79" fill="#8b97a3" text-anchor="middle" font-size="12">27.1</text>
+<path d="M 214.88,274 V 227.68 Q 214.88,224.68 217.88,224.68 H 249.88 Q 252.88,224.68 252.88,227.68 V 274 Z" fill="#82909e"><title>2026-05：27.1 小时</title></path>
+<text x="233.88" y="214.68" fill="#8b97a3" text-anchor="middle" font-size="12">27.1</text>
 <text x="233.88" y="301" fill="#8b97a3" text-anchor="middle" font-size="12">5月</text>
-<path d="M 328.12,274 V 224.57 Q 328.12,221.57 331.12,221.57 H 363.12 Q 366.12,221.57 366.12,224.57 V 274 Z" fill="#82909e"><title>2026-06：17.3 小时</title></path>
-<text x="347.12" y="211.57" fill="#8b97a3" text-anchor="middle" font-size="12">17.3</text>
+<path d="M 328.12,274 V 245.54 Q 328.12,242.54 331.12,242.54 H 363.12 Q 366.12,242.54 366.12,245.54 V 274 Z" fill="#82909e"><title>2026-06：17.3 小时</title></path>
+<text x="347.12" y="232.54" fill="#8b97a3" text-anchor="middle" font-size="12">17.3</text>
 <text x="347.12" y="301" fill="#8b97a3" text-anchor="middle" font-size="12">6月</text>
-<path d="M 441.38,274 V 184.69 Q 441.38,181.69 444.38,181.69 H 476.38 Q 479.38,181.69 479.38,184.69 V 274 Z" fill="#82909e"><title>2026-07：30.4 小时</title></path>
-<text x="460.38" y="171.69" fill="#8b97a3" text-anchor="middle" font-size="12">30.4</text>
+<path d="M 441.38,274 V 221.61 Q 441.38,218.61 444.38,218.61 H 476.38 Q 479.38,218.61 479.38,221.61 V 274 Z" fill="#82909e"><title>2026-07：30.4 小时</title></path>
+<text x="460.38" y="208.61" fill="#8b97a3" text-anchor="middle" font-size="12">30.4</text>
 <text x="460.38" y="301" fill="#8b97a3" text-anchor="middle" font-size="12">7月</text>
-<path d="M 554.62,274 V 125.87 Q 554.62,122.87 557.62,122.87 H 589.62 Q 592.62,122.87 592.62,125.87 V 274 Z" fill="#82909e"><title>2026-08：49.8 小时</title></path>
-<text x="573.62" y="112.87" fill="#8b97a3" text-anchor="middle" font-size="12">49.8</text>
+<path d="M 554.62,274 V 186.32 Q 554.62,183.32 557.62,183.32 H 589.62 Q 592.62,183.32 592.62,186.32 V 274 Z" fill="#82909e"><title>2026-08：49.8 小时</title></path>
+<text x="573.62" y="173.32" fill="#8b97a3" text-anchor="middle" font-size="12">49.8</text>
 <text x="573.62" y="301" fill="#8b97a3" text-anchor="middle" font-size="12">8月</text>
-<path d="M 667.88,274 V 140.21 Q 667.88,137.21 670.88,137.21 H 702.88 Q 705.88,137.21 705.88,140.21 V 274 Z" fill="#82909e"><title>2026-09：45.1 小时</title></path>
-<text x="686.88" y="127.21" fill="#8b97a3" text-anchor="middle" font-size="12">45.1</text>
+<path d="M 667.88,274 V 194.93 Q 667.88,191.93 670.88,191.93 H 702.88 Q 705.88,191.93 705.88,194.93 V 274 Z" fill="#82909e"><title>2026-09：45.1 小时</title></path>
+<text x="686.88" y="181.93" fill="#8b97a3" text-anchor="middle" font-size="12">45.1</text>
 <text x="686.88" y="301" fill="#8b97a3" text-anchor="middle" font-size="12">9月</text>
-<path d="M 781.12,274 V 117.57 Q 781.12,114.57 784.12,114.57 H 816.12 Q 819.12,114.57 819.12,117.57 V 274 Z" fill="#82909e"><title>2026-10：52.6 小时</title></path>
-<text x="800.12" y="104.57" fill="#8b97a3" text-anchor="middle" font-size="12">52.6</text>
+<path d="M 781.12,274 V 163.64 Q 781.12,160.64 784.12,160.64 H 816.12 Q 819.12,160.64 819.12,163.64 V 274 Z" fill="#82909e"><title>2026-10：62.3 小时</title></path>
+<text x="800.12" y="150.64" fill="#8b97a3" text-anchor="middle" font-size="12">62.3</text>
 <text x="800.12" y="301" fill="#8b97a3" text-anchor="middle" font-size="12">10月</text>
-<path d="M 894.38,274 V 272.67 Q 894.38,271.34 895.71,271.34 H 931.04 Q 932.38,271.34 932.38,272.67 V 274 Z" fill="#d5dde5"><title>2026-11：0.9 小时</title></path>
-<text x="913.38" y="261.34" fill="#d5dde5" text-anchor="middle" font-size="12">0.9</text>
+<path d="M 894.38,274 V 269.54 Q 894.38,266.54 897.38,266.54 H 929.38 Q 932.38,266.54 932.38,269.54 V 274 Z" fill="#d5dde5"><title>2026-11：4.1 小时</title></path>
+<text x="913.38" y="256.54" fill="#d5dde5" text-anchor="middle" font-size="12">4.1</text>
 <text x="913.38" y="301" fill="#d5dde5" text-anchor="middle" font-size="12">11月</text>
 </g></svg>

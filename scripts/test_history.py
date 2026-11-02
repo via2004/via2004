@@ -7,9 +7,25 @@ import xml.etree.ElementTree as ET
 
 from history import archive_days, combined_days, history_svg
 from import_history import summarize, TZ
+from sync_activity import merge_sessions, build_snapshot
 
 
 class HistoryTests(unittest.TestCase):
+    def test_persistent_cache_keeps_archived_fragments_and_deduplicates(self):
+        previous = {'thread': [1792454400, 1792454700]}
+        current = {'thread': {1792454700, 1792455000}, 'other': {1792454600, 1792454900}}
+        merged = merge_sessions(previous, current)
+        self.assertEqual(len(merged['thread']), 3)
+        result = build_snapshot(merged, 4, 0, date(2026, 11, 2))
+        self.assertEqual(sum(d['estimated_ai_seconds'] for d in result['days'].values()), 600)
+        self.assertEqual(merge_sessions(merged, {}), merged)
+        self.assertNotIn('thread', json.dumps(result))
+
+    def test_continuous_local_history_is_authoritative_without_service_overlap(self):
+        local = {'schema_version': 2, 'days': {'2026-11-01': {'estimated_ai_seconds': 7786}}}
+        service = {'2026-11-01': {'ai_seconds': 226}, '2026-11-02': {'ai_seconds': 900}}
+        self.assertEqual(combined_days(local, service), {'2026-11-01': 7786})
+
     def test_fragments_deduplicate_and_parallel_activity_does_not_double_count(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

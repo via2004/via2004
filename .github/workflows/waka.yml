@@ -1,5 +1,8 @@
 name: Update coding stats
 on:
+  push:
+    paths:
+      - data/codex-activity.json
   schedule:
     - cron: '17 0 * * *'
   workflow_dispatch:
@@ -20,11 +23,12 @@ jobs:
         run: python3 scripts/update_stats.py
       - name: Publish statistics
         run: |
-          git add README.md assets/coding-history.svg data/daily-stats.json
+          git add README.md assets/coding-history.svg data/daily-stats.json data/wakatime-week.json
           if git diff --cached --quiet; then
             exit 0
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git commit -m 'chore: update coding activity'
+          git pull --rebase origin main
           git push
