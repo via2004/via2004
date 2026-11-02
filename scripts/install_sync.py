@@ -33,8 +33,8 @@ def main():
         'TimeoutStartSec=180', 'UMask=0077', 'Nice=10', '',
     ])
     timer = '\n'.join([
-        '[Unit]', 'Description=Sync Codex activity every 15 minutes', '',
-        '[Timer]', 'OnCalendar=*-*-* *:00/15:00', 'OnStartupSec=1min',
+        '[Unit]', 'Description=Sync Codex activity daily at 08:00 Asia/Shanghai', '',
+        '[Timer]', 'OnCalendar=*-*-* 08:00:00 Asia/Shanghai',
         'Persistent=true', 'RandomizedDelaySec=30', '',
         '[Install]', 'WantedBy=timers.target', '',
     ])

@@ -3,8 +3,6 @@ on:
   push:
     paths:
       - data/codex-activity.json
-  schedule:
-    - cron: '17 0 * * *'
   workflow_dispatch:
 permissions:
   contents: write
