@@ -1,7 +1,7 @@
 {
   "start": "2026-10-27",
   "end": "2026-11-02",
-  "fetched_at": "2026-11-02 17:46:22 CST",
+  "fetched_at": "2026-11-02 18:01:11 CST",
   "rows": [
     {
       "range": {
@@ -330,21 +330,21 @@
         "date": "2026-11-02"
       },
       "grand_total": {
-        "total_seconds": 9748.541,
-        "ai_additions": 251,
+        "total_seconds": 11275.709,
+        "ai_additions": 301,
         "ai_deletions": 1,
         "human_additions": 19,
         "human_deletions": 2,
-        "ai_input_tokens": 662794,
-        "ai_cached_input_tokens": 17549312,
-        "ai_output_tokens": 44165,
-        "ai_prompt_events_total": 55,
-        "ai_model_total_cost": 26.385502
+        "ai_input_tokens": 731599,
+        "ai_cached_input_tokens": 22141696,
+        "ai_output_tokens": 54359,
+        "ai_prompt_events_total": 57,
+        "ai_model_total_cost": 32.175636
       },
       "categories": [
         {
           "name": "AI Coding",
-          "total_seconds": 8761.823
+          "total_seconds": 10288.991
         },
         {
           "name": "Coding",
@@ -358,7 +358,7 @@
       "languages": [
         {
           "name": "Other",
-          "total_seconds": 4809.211
+          "total_seconds": 5439.486
         },
         {
           "name": "TeX",
@@ -366,7 +366,11 @@
         },
         {
           "name": "Go",
-          "total_seconds": 972.598
+          "total_seconds": 976.655
+        },
+        {
+          "name": "C++",
+          "total_seconds": 892.836
         },
         {
           "name": "Python",
@@ -392,7 +396,7 @@
       "editors": [
         {
           "name": "Cursor",
-          "total_seconds": 9641.271
+          "total_seconds": 11168.439
         },
         {
           "name": "Codex Vscode",
