@@ -1,7 +1,7 @@
 {
   "start": "2026-10-27",
   "end": "2026-11-02",
-  "fetched_at": "2026-11-02 18:16:08 CST",
+  "fetched_at": "2026-11-02 20:01:30 CST",
   "rows": [
     {
       "range": {
@@ -358,19 +358,19 @@
       "languages": [
         {
           "name": "Other",
-          "total_seconds": 5439.486
+          "total_seconds": 4550.267
         },
         {
           "name": "TeX",
           "total_seconds": 2635.6
         },
         {
-          "name": "Go",
-          "total_seconds": 976.655
+          "name": "C++",
+          "total_seconds": 1782.055
         },
         {
-          "name": "C++",
-          "total_seconds": 892.836
+          "name": "Go",
+          "total_seconds": 976.655
         },
         {
           "name": "Python",
@@ -396,11 +396,11 @@
       "editors": [
         {
           "name": "Cursor",
-          "total_seconds": 11168.439
+          "total_seconds": 11164.382
         },
         {
           "name": "Codex Vscode",
-          "total_seconds": 107.27
+          "total_seconds": 111.327
         }
       ]
     }
