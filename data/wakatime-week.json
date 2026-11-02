@@ -1,7 +1,7 @@
 {
   "start": "2026-10-27",
   "end": "2026-11-02",
-  "fetched_at": "2026-11-02 16:01:09 CST",
+  "fetched_at": "2026-11-02 16:16:18 CST",
   "rows": [
     {
       "range": {
@@ -330,21 +330,21 @@
         "date": "2026-11-02"
       },
       "grand_total": {
-        "total_seconds": 4868.427,
-        "ai_additions": 42,
+        "total_seconds": 8151.436,
+        "ai_additions": 251,
         "ai_deletions": 1,
         "human_additions": 4,
         "human_deletions": 2,
-        "ai_input_tokens": 534539,
-        "ai_cached_input_tokens": 12397952,
-        "ai_output_tokens": 21667,
-        "ai_prompt_events_total": 28,
-        "ai_model_total_cost": 18.826692
+        "ai_input_tokens": 573052,
+        "ai_cached_input_tokens": 16597760,
+        "ai_output_tokens": 39593,
+        "ai_prompt_events_total": 48,
+        "ai_model_total_cost": 24.30793
       },
       "categories": [
         {
           "name": "AI Coding",
-          "total_seconds": 4069.462
+          "total_seconds": 7352.471
         },
         {
           "name": "Coding",
@@ -357,42 +357,46 @@
       ],
       "languages": [
         {
+          "name": "Other",
+          "total_seconds": 3499.306
+        },
+        {
           "name": "TeX",
           "total_seconds": 2635.6
         },
         {
-          "name": "Other",
-          "total_seconds": 932.436
+          "name": "Python",
+          "total_seconds": 702.417
         },
         {
           "name": "Go",
           "total_seconds": 685.398
         },
         {
-          "name": "Python",
-          "total_seconds": 552.449
+          "name": "Markdown",
+          "total_seconds": 534.893
         },
         {
           "name": "SQL",
           "total_seconds": 56.774
         },
         {
-          "name": "TypeScript",
-          "total_seconds": 5.77
+          "name": "YAML",
+          "total_seconds": 31.278
         },
         {
-          "name": "YAML",
-          "total_seconds": 0.0
+          "name": "TypeScript",
+          "total_seconds": 5.77
         }
       ],
       "editors": [
         {
           "name": "Cursor",
-          "total_seconds": 4868.163
+          "total_seconds": 8151.117
         },
         {
           "name": "Codex Vscode",
-          "total_seconds": 0.264
+          "total_seconds": 0.319
         }
       ]
     }

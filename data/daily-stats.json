@@ -221,16 +221,16 @@
     "ai_seconds": 226.691
   },
   "2026-11-02": {
-    "total_seconds": 4868.427,
-    "ai_additions": 42,
+    "total_seconds": 8151.436,
+    "ai_additions": 251,
     "ai_deletions": 1,
     "human_additions": 4,
     "human_deletions": 2,
-    "ai_input_tokens": 534539,
-    "ai_cached_input_tokens": 12397952,
-    "ai_output_tokens": 21667,
-    "ai_prompt_events_total": 28,
-    "ai_model_total_cost": 18.826692,
-    "ai_seconds": 4069.462
+    "ai_input_tokens": 573052,
+    "ai_cached_input_tokens": 16597760,
+    "ai_output_tokens": 39593,
+    "ai_prompt_events_total": 48,
+    "ai_model_total_cost": 24.30793,
+    "ai_seconds": 7352.471
   }
 }
