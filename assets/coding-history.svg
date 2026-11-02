@@ -31,9 +31,10 @@
 <path d="M 667.88,274 V 140.21 Q 667.88,137.21 670.88,137.21 H 702.88 Q 705.88,137.21 705.88,140.21 V 274 Z" fill="#82909e"><title>2026-09：45.1 小时</title></path>
 <text x="686.88" y="127.21" fill="#8b97a3" text-anchor="middle" font-size="12">45.1</text>
 <text x="686.88" y="301" fill="#8b97a3" text-anchor="middle" font-size="12">9月</text>
-<path d="M 781.12,274 V 118.37 Q 781.12,115.37 784.12,115.37 H 816.12 Q 819.12,115.37 819.12,118.37 V 274 Z" fill="#82909e"><title>2026-10：52.3 小时</title></path>
-<text x="800.12" y="105.37" fill="#8b97a3" text-anchor="middle" font-size="12">52.3</text>
+<path d="M 781.12,274 V 117.57 Q 781.12,114.57 784.12,114.57 H 816.12 Q 819.12,114.57 819.12,117.57 V 274 Z" fill="#82909e"><title>2026-10：52.6 小时</title></path>
+<text x="800.12" y="104.57" fill="#8b97a3" text-anchor="middle" font-size="12">52.6</text>
 <text x="800.12" y="301" fill="#8b97a3" text-anchor="middle" font-size="12">10月</text>
-<text x="913.38" y="264.00" fill="#d5dde5" text-anchor="middle" font-size="12">0.0</text>
+<path d="M 894.38,274 V 272.67 Q 894.38,271.34 895.71,271.34 H 931.04 Q 932.38,271.34 932.38,272.67 V 274 Z" fill="#d5dde5"><title>2026-11：0.9 小时</title></path>
+<text x="913.38" y="261.34" fill="#d5dde5" text-anchor="middle" font-size="12">0.9</text>
 <text x="913.38" y="301" fill="#d5dde5" text-anchor="middle" font-size="12">11月</text>
 </g></svg>

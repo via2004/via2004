@@ -195,29 +195,42 @@
     "ai_seconds": 4375.161
   },
   "2026-10-31": {
-    "total_seconds": 7561.51,
+    "total_seconds": 8516.345,
     "ai_additions": 0,
     "ai_deletions": 0,
     "human_additions": 8,
     "human_deletions": 9,
-    "ai_input_tokens": 729043,
-    "ai_cached_input_tokens": 10617216,
-    "ai_output_tokens": 26540,
-    "ai_prompt_events_total": 18,
-    "ai_model_total_cost": 18.666218,
-    "ai_seconds": 3494.257
+    "ai_input_tokens": 732478,
+    "ai_cached_input_tokens": 11358592,
+    "ai_output_tokens": 27260,
+    "ai_prompt_events_total": 27,
+    "ai_model_total_cost": 19.477944,
+    "ai_seconds": 4449.092
   },
   "2026-11-01": {
-    "total_seconds": 0.0,
-    "ai_additions": 0,
+    "total_seconds": 4402.019,
+    "ai_additions": 1,
     "ai_deletions": 0,
-    "human_additions": 0,
-    "human_deletions": 0,
-    "ai_input_tokens": 0,
-    "ai_cached_input_tokens": 0,
-    "ai_output_tokens": 0,
-    "ai_prompt_events_total": 0,
-    "ai_model_total_cost": 0,
-    "ai_seconds": 0
+    "human_additions": 10,
+    "human_deletions": 11,
+    "ai_input_tokens": 62056,
+    "ai_cached_input_tokens": 537216,
+    "ai_output_tokens": 1621,
+    "ai_prompt_events_total": 4,
+    "ai_model_total_cost": 1.238826,
+    "ai_seconds": 226.691
+  },
+  "2026-11-02": {
+    "total_seconds": 3733.295,
+    "ai_additions": 1,
+    "ai_deletions": 1,
+    "human_additions": 4,
+    "human_deletions": 2,
+    "ai_input_tokens": 200394,
+    "ai_cached_input_tokens": 5744768,
+    "ai_output_tokens": 12676,
+    "ai_prompt_events_total": 20,
+    "ai_model_total_cost": 8.382508,
+    "ai_seconds": 2934.33
   }
 }
