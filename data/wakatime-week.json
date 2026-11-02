@@ -1,7 +1,7 @@
 {
   "start": "2026-10-27",
   "end": "2026-11-02",
-  "fetched_at": "2026-11-02 20:30:20 CST",
+  "fetched_at": "2026-11-02 20:46:08 CST",
   "rows": [
     {
       "range": {
@@ -330,7 +330,7 @@
         "date": "2026-11-02"
       },
       "grand_total": {
-        "total_seconds": 11275.709,
+        "total_seconds": 11301.844,
         "ai_additions": 301,
         "ai_deletions": 1,
         "human_additions": 19,
@@ -338,7 +338,7 @@
         "ai_input_tokens": 731599,
         "ai_cached_input_tokens": 22141696,
         "ai_output_tokens": 54359,
-        "ai_prompt_events_total": 57,
+        "ai_prompt_events_total": 58,
         "ai_model_total_cost": 32.175636
       },
       "categories": [
@@ -349,6 +349,10 @@
         {
           "name": "Coding",
           "total_seconds": 983.549
+        },
+        {
+          "name": "Writing Docs",
+          "total_seconds": 26.135
         },
         {
           "name": "Writing Tests",
@@ -378,7 +382,7 @@
         },
         {
           "name": "Markdown",
-          "total_seconds": 534.893
+          "total_seconds": 561.028
         },
         {
           "name": "SQL",
@@ -396,7 +400,7 @@
       "editors": [
         {
           "name": "Cursor",
-          "total_seconds": 11164.382
+          "total_seconds": 11190.517
         },
         {
           "name": "Codex Vscode",
