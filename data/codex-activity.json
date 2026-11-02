@@ -912,12 +912,12 @@
       "sessions": 5
     },
     "2026-11-02": {
-      "estimated_ai_seconds": 16306,
-      "activity_events": 821,
+      "estimated_ai_seconds": 17232,
+      "activity_events": 830,
       "sessions": 8
     }
   },
   "coverage_start": "2026-04-04",
   "coverage_end": "2026-11-02",
-  "last_event_at": "2026-11-02T11:56:56.772000+00:00"
+  "last_event_at": "2026-11-02T12:12:21.431000+00:00"
 }
