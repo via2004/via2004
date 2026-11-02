@@ -2,7 +2,7 @@
   "schema_version": 2,
   "timezone": "Asia/Shanghai",
   "method": "Local Codex activity estimate: merge every log fragment by session ID; deduplicate timestamps; connect adjacent activity within 15 minutes; union overlapping sessions. Excludes internal subagents. Not a precise work-time measurement.",
-  "source_files": 212,
+  "source_files": 213,
   "unique_sessions": 122,
   "unreadable_records": 0,
   "days": {
@@ -912,12 +912,12 @@
       "sessions": 5
     },
     "2026-11-02": {
-      "estimated_ai_seconds": 15765,
-      "activity_events": 791,
+      "estimated_ai_seconds": 16257,
+      "activity_events": 814,
       "sessions": 8
     }
   },
   "coverage_start": "2026-04-04",
   "coverage_end": "2026-11-02",
-  "last_event_at": "2026-11-02T10:00:27.596000+00:00"
+  "last_event_at": "2026-11-02T10:08:39.607000+00:00"
 }
