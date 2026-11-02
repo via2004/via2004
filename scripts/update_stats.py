@@ -1,6 +1,5 @@
 """Render seven calendar days, including today, from WakaTime daily summaries."""
 
-import base64
 from collections import defaultdict
 from datetime import datetime, timedelta
 import json
@@ -18,17 +17,31 @@ END = '<!--END_SECTION:waka-->'
 TIMEZONE = ZoneInfo('Asia/Shanghai')
 
 
+def read_access_token(environ):
+    token = environ.get('WAKATIME_ACCESS_TOKEN', '').strip()
+    if not token:
+        raise ValueError(
+            'Missing WAKATIME_ACCESS_TOKEN. Create a personal OAuth token at '
+            'https://wakatime.com/oauth with read_summaries access and save it '
+            'as the repository Actions secret WAKATIME_ACCESS_TOKEN. '
+            'Keep the editor API key unchanged. Previous statistics were preserved.')
+    if not token.startswith('waka_tok_'):
+        raise ValueError(
+            'WAKATIME_ACCESS_TOKEN must be an OAuth access token (waka_tok_), '
+            'not the editor API key. Get it from https://wakatime.com/oauth. '
+            'Previous statistics were preserved.')
+    return token
+
+
 def date_range(now):
     end = now.astimezone(TIMEZONE).date()
     return end - timedelta(days=6), end
 
 
-def fetch_summaries(key, start, end):
+def fetch_summaries(token, start, end):
     query = urlencode({'start': str(start), 'end': str(end), 'timezone': str(TIMEZONE)})
-    auth = ('Bearer ' + key if key.startswith('waka_tok_') else
-            'Basic ' + base64.b64encode((key + ':').encode()).decode())
     request = Request('https://api.wakatime.com/api/v1/users/current/summaries?' + query,
-                      headers={'Authorization': auth, 'Cache-Control': 'no-cache'})
+                      headers={'Authorization': 'Bearer ' + token, 'Cache-Control': 'no-cache'})
     with urlopen(request, timeout=60) as response:
         if response.status != 200:
             raise ValueError('WakaTime has not finished calculating summaries.')
@@ -102,12 +115,10 @@ def replace_section(original, block):
 
 
 def main():
-    key = os.environ.get('WAKATIME_API_KEY', '').strip()
-    if not key:
-        raise ValueError('Missing WAKATIME_API_KEY; keeping previous statistics.')
+    token = read_access_token(os.environ)
     now = datetime.now(TIMEZONE)
     start, end = date_range(now)
-    rows = fetch_summaries(key, start, end)
+    rows = fetch_summaries(token, start, end)
     path = Path(__file__).resolve().parents[1] / 'README.md'
     daily, svg, intro = prepare_history(path.parent, rows, now)
     updated = replace_section(path.read_text(), intro + '\n' + render(rows, start, end, now))
@@ -126,6 +137,9 @@ if __name__ == '__main__':
         main()
     except HTTPError as error:
         print(f'WakaTime API returned HTTP {error.code}; README unchanged.', file=sys.stderr)
+        if error.code in (401, 403):
+            print('Check that WAKATIME_ACCESS_TOKEN is an unexpired OAuth token '
+                  'with read_summaries access: https://wakatime.com/oauth', file=sys.stderr)
         sys.exit(1)
     except (ValueError, URLError) as error:
         print(str(error), file=sys.stderr)

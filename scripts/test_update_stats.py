@@ -1,11 +1,38 @@
 import unittest
 from datetime import datetime, date, timezone
 from unittest.mock import patch, MagicMock
+from urllib.error import HTTPError
 
-from update_stats import date_range, fetch_summaries, render, replace_section, START, END
+from update_stats import date_range, fetch_summaries, render, replace_section, read_access_token, main, START, END
 
 
 class StatisticsTests(unittest.TestCase):
+    def test_read_token_rejects_missing_secret_and_upload_api_key(self):
+        for env in [{}, {'WAKATIME_ACCESS_TOKEN': 'waka_test_upload_only'}]:
+            with self.assertRaises(ValueError) as caught:
+                read_access_token(env)
+            self.assertNotIn('waka_test_upload_only', str(caught.exception))
+        self.assertEqual(read_access_token({'WAKATIME_ACCESS_TOKEN': ' waka_tok_test '}), 'waka_tok_test')
+
+    def test_oauth_bearer_header_and_no_token_in_url(self):
+        response = MagicMock()
+        response.status = 200
+        response.__enter__.return_value = response
+        payload = {'data': [{'range': {'date': '2026-11-02'}, 'grand_total': {}}]}
+        with patch('update_stats.urlopen', return_value=response) as opened, patch('update_stats.json.load', return_value=payload):
+            fetch_summaries('waka_tok_test', date(2026, 11, 2), date(2026, 11, 2))
+        request = opened.call_args.args[0]
+        self.assertEqual(request.get_header('Authorization'), 'Bearer waka_tok_test')
+        self.assertNotIn('waka_tok_test', request.full_url)
+
+    def test_permission_denied_preserves_all_generated_files(self):
+        with patch.dict('os.environ', {'WAKATIME_ACCESS_TOKEN': 'waka_tok_test'}), \
+             patch('update_stats.urlopen', side_effect=HTTPError('https://api.wakatime.com', 403, 'Forbidden', {}, None)), \
+             patch('update_stats.Path.write_text') as write:
+            with self.assertRaises(HTTPError):
+                main()
+            write.assert_not_called()
+
     def test_seven_days_include_shanghai_today_at_utc_boundary(self):
         start, end = date_range(datetime(2026, 10, 21, 16, 1, tzinfo=timezone.utc))
         self.assertEqual((start, end), (date(2026, 10, 16), date(2026, 10, 22)))
