@@ -1,122 +1,8 @@
 {
-  "start": "2026-10-27",
-  "end": "2026-11-02",
-  "fetched_at": "2026-11-02 22:00:23 CST",
+  "start": "2026-10-29",
+  "end": "2026-11-04",
+  "fetched_at": "2026-11-04 10:09:11 CST",
   "rows": [
-    {
-      "range": {
-        "date": "2026-10-27"
-      },
-      "grand_total": {
-        "total_seconds": 8533.387,
-        "ai_additions": 0,
-        "ai_deletions": 0,
-        "human_additions": 0,
-        "human_deletions": 0,
-        "ai_input_tokens": 97996,
-        "ai_cached_input_tokens": 2112128,
-        "ai_output_tokens": 3530,
-        "ai_prompt_events_total": 46,
-        "ai_model_total_cost": 3.268588
-      },
-      "categories": [
-        {
-          "name": "AI Coding",
-          "total_seconds": 8533.387
-        }
-      ],
-      "languages": [
-        {
-          "name": "Other",
-          "total_seconds": 8533.387
-        }
-      ],
-      "editors": [
-        {
-          "name": "Cursor",
-          "total_seconds": 8533.387
-        }
-      ]
-    },
-    {
-      "range": {
-        "date": "2026-10-28"
-      },
-      "grand_total": {
-        "total_seconds": 11062.498,
-        "ai_additions": 0,
-        "ai_deletions": 0,
-        "human_additions": 58,
-        "human_deletions": 6,
-        "ai_input_tokens": 228918,
-        "ai_cached_input_tokens": 1753216,
-        "ai_output_tokens": 4208,
-        "ai_prompt_events_total": 37,
-        "ai_model_total_cost": 4.252796
-      },
-      "categories": [
-        {
-          "name": "AI Coding",
-          "total_seconds": 8416.421
-        },
-        {
-          "name": "Coding",
-          "total_seconds": 2618.977
-        },
-        {
-          "name": "Writing Docs",
-          "total_seconds": 15.902
-        },
-        {
-          "name": "Writing Tests",
-          "total_seconds": 11.198
-        }
-      ],
-      "languages": [
-        {
-          "name": "Other",
-          "total_seconds": 8381.959
-        },
-        {
-          "name": "Go",
-          "total_seconds": 2303.115
-        },
-        {
-          "name": "YAML",
-          "total_seconds": 315.73
-        },
-        {
-          "name": "Markdown",
-          "total_seconds": 30.072
-        },
-        {
-          "name": "Python",
-          "total_seconds": 14.84
-        },
-        {
-          "name": "Docker",
-          "total_seconds": 9.797
-        },
-        {
-          "name": "SQL",
-          "total_seconds": 3.906
-        },
-        {
-          "name": "Bash",
-          "total_seconds": 3.079
-        },
-        {
-          "name": "HTML",
-          "total_seconds": 0.0
-        }
-      ],
-      "editors": [
-        {
-          "name": "Cursor",
-          "total_seconds": 11062.498
-        }
-      ]
-    },
     {
       "range": {
         "date": "2026-10-29"
@@ -330,21 +216,21 @@
         "date": "2026-11-02"
       },
       "grand_total": {
-        "total_seconds": 11301.844,
-        "ai_additions": 301,
-        "ai_deletions": 1,
+        "total_seconds": 11534.66,
+        "ai_additions": 303,
+        "ai_deletions": 3,
         "human_additions": 19,
         "human_deletions": 2,
-        "ai_input_tokens": 731599,
-        "ai_cached_input_tokens": 22141696,
-        "ai_output_tokens": 54359,
-        "ai_prompt_events_total": 58,
-        "ai_model_total_cost": 32.175636
+        "ai_input_tokens": 1102357,
+        "ai_cached_input_tokens": 23849728,
+        "ai_output_tokens": 57332,
+        "ai_prompt_events_total": 60,
+        "ai_model_total_cost": 37.739898
       },
       "categories": [
         {
           "name": "AI Coding",
-          "total_seconds": 10288.991
+          "total_seconds": 10521.807
         },
         {
           "name": "Coding",
@@ -362,7 +248,7 @@
       "languages": [
         {
           "name": "Other",
-          "total_seconds": 4533.198
+          "total_seconds": 4596.163
         },
         {
           "name": "TeX",
@@ -378,7 +264,7 @@
         },
         {
           "name": "Python",
-          "total_seconds": 702.417
+          "total_seconds": 872.268
         },
         {
           "name": "Markdown",
@@ -400,13 +286,100 @@
       "editors": [
         {
           "name": "Cursor",
-          "total_seconds": 11190.517
+          "total_seconds": 11419.074
         },
         {
           "name": "Codex Vscode",
-          "total_seconds": 111.327
+          "total_seconds": 115.586
         }
       ]
+    },
+    {
+      "range": {
+        "date": "2026-11-03"
+      },
+      "grand_total": {
+        "total_seconds": 8074.059,
+        "ai_additions": 10,
+        "ai_deletions": 0,
+        "human_additions": 2,
+        "human_deletions": 1,
+        "ai_input_tokens": 629163,
+        "ai_cached_input_tokens": 4982400,
+        "ai_output_tokens": 12588,
+        "ai_prompt_events_total": 38,
+        "ai_model_total_cost": 11.90343
+      },
+      "categories": [
+        {
+          "name": "AI Coding",
+          "total_seconds": 6340.86
+        },
+        {
+          "name": "Coding",
+          "total_seconds": 1728.51
+        },
+        {
+          "name": "Writing Tests",
+          "total_seconds": 4.689
+        }
+      ],
+      "languages": [
+        {
+          "name": "Other",
+          "total_seconds": 5816.704
+        },
+        {
+          "name": "Go",
+          "total_seconds": 1725.289
+        },
+        {
+          "name": "Markdown",
+          "total_seconds": 274.739
+        },
+        {
+          "name": "TeX",
+          "total_seconds": 253.136
+        },
+        {
+          "name": "YAML",
+          "total_seconds": 4.191
+        },
+        {
+          "name": "Python",
+          "total_seconds": 0.0
+        }
+      ],
+      "editors": [
+        {
+          "name": "Cursor",
+          "total_seconds": 6321.801
+        },
+        {
+          "name": "Codex Vscode",
+          "total_seconds": 1752.258
+        }
+      ]
+    },
+    {
+      "range": {
+        "date": "2026-11-04"
+      },
+      "grand_total": {
+        "total_seconds": 0.0,
+        "ai_additions": 0,
+        "ai_deletions": 0,
+        "human_additions": 0,
+        "human_deletions": 0,
+        "ai_input_tokens": 0,
+        "ai_cached_input_tokens": 0,
+        "ai_output_tokens": 0,
+        "ai_prompt_events_total": 0,
+        "ai_model_total_cost": 0
+      },
+      "categories": [],
+      "languages": [],
+      "editors": []
     }
   ]
 }
