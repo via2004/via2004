@@ -195,30 +195,30 @@
     "ai_seconds": 4375.161
   },
   "2026-10-31": {
-    "total_seconds": 8516.345,
+    "total_seconds": 10756.439,
     "ai_additions": 0,
     "ai_deletions": 0,
     "human_additions": 8,
     "human_deletions": 9,
-    "ai_input_tokens": 732478,
-    "ai_cached_input_tokens": 11358592,
-    "ai_output_tokens": 27260,
-    "ai_prompt_events_total": 27,
-    "ai_model_total_cost": 19.477944,
-    "ai_seconds": 4449.092
+    "ai_input_tokens": 1403345,
+    "ai_cached_input_tokens": 29650560,
+    "ai_output_tokens": 72183,
+    "ai_prompt_events_total": 35,
+    "ai_model_total_cost": 46.724731999999996,
+    "ai_seconds": 7008.5
   },
   "2026-11-01": {
-    "total_seconds": 4402.019,
-    "ai_additions": 1,
-    "ai_deletions": 0,
-    "human_additions": 10,
-    "human_deletions": 11,
-    "ai_input_tokens": 62056,
-    "ai_cached_input_tokens": 537216,
-    "ai_output_tokens": 1621,
-    "ai_prompt_events_total": 4,
-    "ai_model_total_cost": 1.238826,
-    "ai_seconds": 226.691
+    "total_seconds": 6159.441,
+    "ai_additions": 3,
+    "ai_deletions": 5,
+    "human_additions": 11,
+    "human_deletions": 7,
+    "ai_input_tokens": 464293,
+    "ai_cached_input_tokens": 4157184,
+    "ai_output_tokens": 7546,
+    "ai_prompt_events_total": 23,
+    "ai_model_total_cost": 9.177414,
+    "ai_seconds": 2440.68
   },
   "2026-11-02": {
     "total_seconds": 11534.66,
@@ -226,12 +226,12 @@
     "ai_deletions": 3,
     "human_additions": 19,
     "human_deletions": 2,
-    "ai_input_tokens": 1102357,
-    "ai_cached_input_tokens": 23849728,
-    "ai_output_tokens": 57332,
-    "ai_prompt_events_total": 60,
-    "ai_model_total_cost": 37.739898,
-    "ai_seconds": 10521.807
+    "ai_input_tokens": 1291590,
+    "ai_cached_input_tokens": 27904768,
+    "ai_output_tokens": 61679,
+    "ai_prompt_events_total": 63,
+    "ai_model_total_cost": 43.904618,
+    "ai_seconds": 10575.122
   },
   "2026-11-03": {
     "total_seconds": 8931.546,
@@ -260,6 +260,19 @@
     "ai_seconds": 8115.549
   },
   "2026-11-05": {
+    "total_seconds": 2722.067,
+    "ai_additions": 0,
+    "ai_deletions": 0,
+    "human_additions": 28,
+    "human_deletions": 3,
+    "ai_input_tokens": 35672,
+    "ai_cached_input_tokens": 218752,
+    "ai_output_tokens": 760,
+    "ai_prompt_events_total": 4,
+    "ai_model_total_cost": 0.613472,
+    "ai_seconds": 673.848
+  },
+  "2026-11-06": {
     "total_seconds": 0.0,
     "ai_additions": 0,
     "ai_deletions": 0,
