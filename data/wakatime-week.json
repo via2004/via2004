@@ -1,87 +1,32 @@
 {
-  "start": "2026-10-31",
-  "end": "2026-11-06",
-  "fetched_at": "2026-11-06 14:17:11 CST",
+  "start": "2026-11-01",
+  "end": "2026-11-07",
+  "fetched_at": "2026-11-07 10:52:48 CST",
   "rows": [
-    {
-      "range": {
-        "date": "2026-10-31"
-      },
-      "grand_total": {
-        "total_seconds": 10756.439,
-        "ai_additions": 0,
-        "ai_deletions": 0,
-        "human_additions": 8,
-        "human_deletions": 9,
-        "ai_input_tokens": 1403345,
-        "ai_cached_input_tokens": 29650560,
-        "ai_output_tokens": 72183,
-        "ai_prompt_events_total": 35,
-        "ai_model_total_cost": 46.724731999999996
-      },
-      "categories": [
-        {
-          "name": "AI Coding",
-          "total_seconds": 7008.5
-        },
-        {
-          "name": "Coding",
-          "total_seconds": 3741.045
-        },
-        {
-          "name": "Writing Tests",
-          "total_seconds": 6.894
-        }
-      ],
-      "languages": [
-        {
-          "name": "Go",
-          "total_seconds": 5329.979
-        },
-        {
-          "name": "Other",
-          "total_seconds": 3211.517
-        },
-        {
-          "name": "Markdown",
-          "total_seconds": 2214.943
-        }
-      ],
-      "editors": [
-        {
-          "name": "Cursor",
-          "total_seconds": 6846.453
-        },
-        {
-          "name": "Codex Vscode",
-          "total_seconds": 3909.986
-        }
-      ]
-    },
     {
       "range": {
         "date": "2026-11-01"
       },
       "grand_total": {
-        "total_seconds": 6159.441,
+        "total_seconds": 7977.789,
         "ai_additions": 3,
         "ai_deletions": 5,
         "human_additions": 11,
         "human_deletions": 7,
-        "ai_input_tokens": 464293,
-        "ai_cached_input_tokens": 4157184,
-        "ai_output_tokens": 7546,
-        "ai_prompt_events_total": 23,
-        "ai_model_total_cost": 9.177414
+        "ai_input_tokens": 1045340,
+        "ai_cached_input_tokens": 8184704,
+        "ai_output_tokens": 15843,
+        "ai_prompt_events_total": 30,
+        "ai_model_total_cost": 19.430254
       },
       "categories": [
         {
-          "name": "Coding",
-          "total_seconds": 3699.221
+          "name": "AI Coding",
+          "total_seconds": 4248.97
         },
         {
-          "name": "AI Coding",
-          "total_seconds": 2440.68
+          "name": "Coding",
+          "total_seconds": 3709.279
         },
         {
           "name": "Writing Tests",
@@ -91,7 +36,7 @@
       "languages": [
         {
           "name": "Go",
-          "total_seconds": 3665.945
+          "total_seconds": 5499.118
         },
         {
           "name": "Other",
@@ -103,13 +48,17 @@
         },
         {
           "name": "TeX",
-          "total_seconds": 341.526
+          "total_seconds": 326.701
         }
       ],
       "editors": [
         {
           "name": "Cursor",
-          "total_seconds": 6159.441
+          "total_seconds": 6154.674
+        },
+        {
+          "name": "Codex Vscode",
+          "total_seconds": 1823.115
         }
       ]
     },
@@ -388,6 +337,73 @@
     {
       "range": {
         "date": "2026-11-06"
+      },
+      "grand_total": {
+        "total_seconds": 12641.097,
+        "ai_additions": 0,
+        "ai_deletions": 0,
+        "human_additions": 105,
+        "human_deletions": 9,
+        "ai_input_tokens": 8787381,
+        "ai_cached_input_tokens": 241831040,
+        "ai_output_tokens": 637146,
+        "ai_prompt_events_total": 31,
+        "ai_model_total_cost": 361.56215
+      },
+      "categories": [
+        {
+          "name": "AI Coding",
+          "total_seconds": 8874.997
+        },
+        {
+          "name": "Coding",
+          "total_seconds": 3217.146
+        },
+        {
+          "name": "Writing Docs",
+          "total_seconds": 541.562
+        },
+        {
+          "name": "Writing Tests",
+          "total_seconds": 7.392
+        }
+      ],
+      "languages": [
+        {
+          "name": "Other",
+          "total_seconds": 6911.363
+        },
+        {
+          "name": "Go",
+          "total_seconds": 5187.758
+        },
+        {
+          "name": "Markdown",
+          "total_seconds": 541.562
+        },
+        {
+          "name": "HTML",
+          "total_seconds": 0.414
+        }
+      ],
+      "editors": [
+        {
+          "name": "Codex Vscode",
+          "total_seconds": 6285.27
+        },
+        {
+          "name": "Cursor",
+          "total_seconds": 6163.012
+        },
+        {
+          "name": "Codex CLI",
+          "total_seconds": 192.815
+        }
+      ]
+    },
+    {
+      "range": {
+        "date": "2026-11-07"
       },
       "grand_total": {
         "total_seconds": 0.0,
