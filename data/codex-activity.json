@@ -3,7 +3,7 @@
   "timezone": "Asia/Shanghai",
   "method": "Local Codex activity estimate: merge every log fragment by session ID; deduplicate timestamps; connect adjacent activity within 15 minutes; union overlapping sessions. Excludes internal subagents. Not a precise work-time measurement.",
   "source_files": 228,
-  "unique_sessions": 145,
+  "unique_sessions": 154,
   "unreadable_records": 0,
   "days": {
     "2026-04-04": {
@@ -940,9 +940,24 @@
       "estimated_ai_seconds": 6695,
       "activity_events": 332,
       "sessions": 4
+    },
+    "2026-11-08": {
+      "estimated_ai_seconds": 10918,
+      "activity_events": 372,
+      "sessions": 4
+    },
+    "2026-11-09": {
+      "estimated_ai_seconds": 2879,
+      "activity_events": 116,
+      "sessions": 6
+    },
+    "2026-11-10": {
+      "estimated_ai_seconds": 92,
+      "activity_events": 11,
+      "sessions": 2
     }
   },
   "coverage_start": "2026-04-04",
-  "coverage_end": "2026-11-08",
-  "last_event_at": "2026-11-07T14:32:48.036000+00:00"
+  "coverage_end": "2026-11-10",
+  "last_event_at": "2026-11-09T17:16:58.403000+00:00"
 }
