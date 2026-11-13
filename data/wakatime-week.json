@@ -1,197 +1,8 @@
 {
-  "start": "2026-11-04",
-  "end": "2026-11-10",
-  "fetched_at": "2026-11-10 08:00:47 CST",
+  "start": "2026-11-07",
+  "end": "2026-11-13",
+  "fetched_at": "2026-11-13 21:30:23 CST",
   "rows": [
-    {
-      "range": {
-        "date": "2026-11-04"
-      },
-      "grand_total": {
-        "total_seconds": 8779.89,
-        "ai_additions": 605,
-        "ai_deletions": 1,
-        "human_additions": 1,
-        "human_deletions": 0,
-        "ai_input_tokens": 1168718,
-        "ai_cached_input_tokens": 53134464,
-        "ai_output_tokens": 91496,
-        "ai_prompt_events_total": 43,
-        "ai_model_total_cost": 69.396444
-      },
-      "categories": [
-        {
-          "name": "AI Coding",
-          "total_seconds": 8287.427
-        },
-        {
-          "name": "Coding",
-          "total_seconds": 362.169
-        },
-        {
-          "name": "Writing Docs",
-          "total_seconds": 130.294
-        }
-      ],
-      "languages": [
-        {
-          "name": "Other",
-          "total_seconds": 6484.607
-        },
-        {
-          "name": "Python",
-          "total_seconds": 1501.267
-        },
-        {
-          "name": "Markdown",
-          "total_seconds": 651.446
-        },
-        {
-          "name": "CSV",
-          "total_seconds": 100.239
-        },
-        {
-          "name": "Go",
-          "total_seconds": 36.394
-        },
-        {
-          "name": "HTML",
-          "total_seconds": 5.205
-        },
-        {
-          "name": "Bash",
-          "total_seconds": 0.732
-        }
-      ],
-      "editors": [
-        {
-          "name": "Cursor",
-          "total_seconds": 8390.965
-        },
-        {
-          "name": "Codex Vscode",
-          "total_seconds": 388.925
-        }
-      ]
-    },
-    {
-      "range": {
-        "date": "2026-11-05"
-      },
-      "grand_total": {
-        "total_seconds": 5159.073,
-        "ai_additions": 0,
-        "ai_deletions": 0,
-        "human_additions": 28,
-        "human_deletions": 3,
-        "ai_input_tokens": 1169274,
-        "ai_cached_input_tokens": 16134912,
-        "ai_output_tokens": 48105,
-        "ai_prompt_events_total": 18,
-        "ai_model_total_cost": 30.232902
-      },
-      "categories": [
-        {
-          "name": "AI Coding",
-          "total_seconds": 4296.232
-        },
-        {
-          "name": "Coding",
-          "total_seconds": 568.428
-        },
-        {
-          "name": "Writing Tests",
-          "total_seconds": 294.413
-        }
-      ],
-      "languages": [
-        {
-          "name": "Go",
-          "total_seconds": 5029.306
-        },
-        {
-          "name": "Other",
-          "total_seconds": 129.767
-        }
-      ],
-      "editors": [
-        {
-          "name": "Codex Vscode",
-          "total_seconds": 4249.361
-        },
-        {
-          "name": "Cursor",
-          "total_seconds": 909.712
-        }
-      ]
-    },
-    {
-      "range": {
-        "date": "2026-11-06"
-      },
-      "grand_total": {
-        "total_seconds": 13992.118,
-        "ai_additions": 0,
-        "ai_deletions": 0,
-        "human_additions": 105,
-        "human_deletions": 9,
-        "ai_input_tokens": 9570875,
-        "ai_cached_input_tokens": 257532544,
-        "ai_output_tokens": 664216,
-        "ai_prompt_events_total": 44,
-        "ai_model_total_cost": 386.452094
-      },
-      "categories": [
-        {
-          "name": "AI Coding",
-          "total_seconds": 11356.461
-        },
-        {
-          "name": "Coding",
-          "total_seconds": 2578.843
-        },
-        {
-          "name": "Writing Docs",
-          "total_seconds": 49.422
-        },
-        {
-          "name": "Writing Tests",
-          "total_seconds": 7.392
-        }
-      ],
-      "languages": [
-        {
-          "name": "Other",
-          "total_seconds": 7190.894
-        },
-        {
-          "name": "Go",
-          "total_seconds": 6428.127
-        },
-        {
-          "name": "Markdown",
-          "total_seconds": 372.683
-        },
-        {
-          "name": "HTML",
-          "total_seconds": 0.414
-        }
-      ],
-      "editors": [
-        {
-          "name": "Codex Vscode",
-          "total_seconds": 8823.781
-        },
-        {
-          "name": "Cursor",
-          "total_seconds": 5018.767
-        },
-        {
-          "name": "Codex CLI",
-          "total_seconds": 149.57
-        }
-      ]
-    },
     {
       "range": {
         "date": "2026-11-07"
@@ -431,6 +242,66 @@
           "total_seconds": 19.536
         }
       ]
+    },
+    {
+      "range": {
+        "date": "2026-11-11"
+      },
+      "grand_total": {
+        "total_seconds": 0.0,
+        "ai_additions": 0,
+        "ai_deletions": 0,
+        "human_additions": 0,
+        "human_deletions": 0,
+        "ai_input_tokens": 0,
+        "ai_cached_input_tokens": 0,
+        "ai_output_tokens": 0,
+        "ai_prompt_events_total": 0,
+        "ai_model_total_cost": 0
+      },
+      "categories": [],
+      "languages": [],
+      "editors": []
+    },
+    {
+      "range": {
+        "date": "2026-11-12"
+      },
+      "grand_total": {
+        "total_seconds": 0.0,
+        "ai_additions": 0,
+        "ai_deletions": 0,
+        "human_additions": 0,
+        "human_deletions": 0,
+        "ai_input_tokens": 0,
+        "ai_cached_input_tokens": 0,
+        "ai_output_tokens": 0,
+        "ai_prompt_events_total": 0,
+        "ai_model_total_cost": 0
+      },
+      "categories": [],
+      "languages": [],
+      "editors": []
+    },
+    {
+      "range": {
+        "date": "2026-11-13"
+      },
+      "grand_total": {
+        "total_seconds": 0.0,
+        "ai_additions": 0,
+        "ai_deletions": 0,
+        "human_additions": 0,
+        "human_deletions": 0,
+        "ai_input_tokens": 0,
+        "ai_cached_input_tokens": 0,
+        "ai_output_tokens": 0,
+        "ai_prompt_events_total": 0,
+        "ai_model_total_cost": 0
+      },
+      "categories": [],
+      "languages": [],
+      "editors": []
     }
   ]
 }
