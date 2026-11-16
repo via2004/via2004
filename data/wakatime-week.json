@@ -1,51 +1,8 @@
 {
-  "start": "2026-11-09",
-  "end": "2026-11-15",
-  "fetched_at": "2026-11-15 13:33:58 CST",
+  "start": "2026-11-10",
+  "end": "2026-11-16",
+  "fetched_at": "2026-11-16 23:01:22 CST",
   "rows": [
-    {
-      "range": {
-        "date": "2026-11-09"
-      },
-      "grand_total": {
-        "total_seconds": 3641.228,
-        "ai_additions": 0,
-        "ai_deletions": 0,
-        "human_additions": 0,
-        "human_deletions": 0,
-        "ai_input_tokens": 322942,
-        "ai_cached_input_tokens": 2487552,
-        "ai_output_tokens": 15634,
-        "ai_prompt_events_total": 21,
-        "ai_model_total_cost": 6.498672
-      },
-      "categories": [
-        {
-          "name": "AI Coding",
-          "total_seconds": 3641.228
-        }
-      ],
-      "languages": [
-        {
-          "name": "Other",
-          "total_seconds": 3641.228
-        }
-      ],
-      "editors": [
-        {
-          "name": "Codex Vscode",
-          "total_seconds": 3518.98
-        },
-        {
-          "name": "Codex CLI",
-          "total_seconds": 72.683
-        },
-        {
-          "name": "Cursor",
-          "total_seconds": 49.565
-        }
-      ]
-    },
     {
       "range": {
         "date": "2026-11-10"
@@ -230,6 +187,53 @@
     {
       "range": {
         "date": "2026-11-15"
+      },
+      "grand_total": {
+        "total_seconds": 4.7,
+        "ai_additions": 0,
+        "ai_deletions": 0,
+        "human_additions": 0,
+        "human_deletions": 0,
+        "ai_input_tokens": 0,
+        "ai_cached_input_tokens": 0,
+        "ai_output_tokens": 0,
+        "ai_prompt_events_total": 1,
+        "ai_model_total_cost": 0.0
+      },
+      "categories": [
+        {
+          "name": "AI Coding",
+          "total_seconds": 4.7
+        },
+        {
+          "name": "Coding",
+          "total_seconds": 0.0
+        }
+      ],
+      "languages": [
+        {
+          "name": "Other",
+          "total_seconds": 4.7
+        },
+        {
+          "name": "YAML",
+          "total_seconds": 0.0
+        }
+      ],
+      "editors": [
+        {
+          "name": "Codex CLI",
+          "total_seconds": 4.7
+        },
+        {
+          "name": "Cursor",
+          "total_seconds": 0.0
+        }
+      ]
+    },
+    {
+      "range": {
+        "date": "2026-11-16"
       },
       "grand_total": {
         "total_seconds": 0.0,
