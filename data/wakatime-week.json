@@ -1,95 +1,8 @@
 {
-  "start": "2026-11-10",
-  "end": "2026-11-16",
-  "fetched_at": "2026-11-16 23:01:22 CST",
+  "start": "2026-11-13",
+  "end": "2026-11-19",
+  "fetched_at": "2026-11-19 00:02:18 CST",
   "rows": [
-    {
-      "range": {
-        "date": "2026-11-10"
-      },
-      "grand_total": {
-        "total_seconds": 610.908,
-        "ai_additions": 0,
-        "ai_deletions": 0,
-        "human_additions": 0,
-        "human_deletions": 1,
-        "ai_input_tokens": 96215,
-        "ai_cached_input_tokens": 437760,
-        "ai_output_tokens": 7367,
-        "ai_prompt_events_total": 1,
-        "ai_model_total_cost": 1.76826
-      },
-      "categories": [
-        {
-          "name": "Coding",
-          "total_seconds": 486.342
-        },
-        {
-          "name": "AI Coding",
-          "total_seconds": 124.566
-        }
-      ],
-      "languages": [
-        {
-          "name": "Python",
-          "total_seconds": 551.181
-        },
-        {
-          "name": "Other",
-          "total_seconds": 59.727
-        }
-      ],
-      "editors": [
-        {
-          "name": "Cursor",
-          "total_seconds": 591.372
-        },
-        {
-          "name": "Codex CLI",
-          "total_seconds": 19.536
-        }
-      ]
-    },
-    {
-      "range": {
-        "date": "2026-11-11"
-      },
-      "grand_total": {
-        "total_seconds": 0.0,
-        "ai_additions": 0,
-        "ai_deletions": 0,
-        "human_additions": 0,
-        "human_deletions": 0,
-        "ai_input_tokens": 0,
-        "ai_cached_input_tokens": 0,
-        "ai_output_tokens": 0,
-        "ai_prompt_events_total": 0,
-        "ai_model_total_cost": 0
-      },
-      "categories": [],
-      "languages": [],
-      "editors": []
-    },
-    {
-      "range": {
-        "date": "2026-11-12"
-      },
-      "grand_total": {
-        "total_seconds": 0.0,
-        "ai_additions": 0,
-        "ai_deletions": 0,
-        "human_additions": 0,
-        "human_deletions": 0,
-        "ai_input_tokens": 0,
-        "ai_cached_input_tokens": 0,
-        "ai_output_tokens": 0,
-        "ai_prompt_events_total": 0,
-        "ai_model_total_cost": 0
-      },
-      "categories": [],
-      "languages": [],
-      "editors": []
-    },
     {
       "range": {
         "date": "2026-11-13"
@@ -234,6 +147,66 @@
     {
       "range": {
         "date": "2026-11-16"
+      },
+      "grand_total": {
+        "total_seconds": 0.0,
+        "ai_additions": 0,
+        "ai_deletions": 0,
+        "human_additions": 0,
+        "human_deletions": 0,
+        "ai_input_tokens": 0,
+        "ai_cached_input_tokens": 0,
+        "ai_output_tokens": 0,
+        "ai_prompt_events_total": 0,
+        "ai_model_total_cost": 0
+      },
+      "categories": [],
+      "languages": [],
+      "editors": []
+    },
+    {
+      "range": {
+        "date": "2026-11-17"
+      },
+      "grand_total": {
+        "total_seconds": 0.0,
+        "ai_additions": 0,
+        "ai_deletions": 0,
+        "human_additions": 0,
+        "human_deletions": 0,
+        "ai_input_tokens": 0,
+        "ai_cached_input_tokens": 0,
+        "ai_output_tokens": 0,
+        "ai_prompt_events_total": 0,
+        "ai_model_total_cost": 0
+      },
+      "categories": [],
+      "languages": [],
+      "editors": []
+    },
+    {
+      "range": {
+        "date": "2026-11-18"
+      },
+      "grand_total": {
+        "total_seconds": 0.0,
+        "ai_additions": 0,
+        "ai_deletions": 0,
+        "human_additions": 0,
+        "human_deletions": 0,
+        "ai_input_tokens": 0,
+        "ai_cached_input_tokens": 0,
+        "ai_output_tokens": 0,
+        "ai_prompt_events_total": 0,
+        "ai_model_total_cost": 0
+      },
+      "categories": [],
+      "languages": [],
+      "editors": []
+    },
+    {
+      "range": {
+        "date": "2026-11-19"
       },
       "grand_total": {
         "total_seconds": 0.0,
