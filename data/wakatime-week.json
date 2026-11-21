@@ -1,102 +1,8 @@
 {
-  "start": "2026-11-13",
-  "end": "2026-11-19",
-  "fetched_at": "2026-11-19 00:02:18 CST",
+  "start": "2026-11-15",
+  "end": "2026-11-21",
+  "fetched_at": "2026-11-21 17:05:15 CST",
   "rows": [
-    {
-      "range": {
-        "date": "2026-11-13"
-      },
-      "grand_total": {
-        "total_seconds": 5.804,
-        "ai_additions": 0,
-        "ai_deletions": 0,
-        "human_additions": 0,
-        "human_deletions": 0,
-        "ai_input_tokens": 0,
-        "ai_cached_input_tokens": 0,
-        "ai_output_tokens": 0,
-        "ai_prompt_events_total": 1,
-        "ai_model_total_cost": 0.0
-      },
-      "categories": [
-        {
-          "name": "AI Coding",
-          "total_seconds": 5.804
-        }
-      ],
-      "languages": [
-        {
-          "name": "Other",
-          "total_seconds": 5.804
-        }
-      ],
-      "editors": [
-        {
-          "name": "Codex CLI",
-          "total_seconds": 5.804
-        },
-        {
-          "name": "Codex Vscode",
-          "total_seconds": 0.0
-        }
-      ]
-    },
-    {
-      "range": {
-        "date": "2026-11-14"
-      },
-      "grand_total": {
-        "total_seconds": 1496.627,
-        "ai_additions": 0,
-        "ai_deletions": 0,
-        "human_additions": 0,
-        "human_deletions": 0,
-        "ai_input_tokens": 12717,
-        "ai_cached_input_tokens": 1560320,
-        "ai_output_tokens": 3699,
-        "ai_prompt_events_total": 3,
-        "ai_model_total_cost": 1.87244
-      },
-      "categories": [
-        {
-          "name": "AI Coding",
-          "total_seconds": 1496.159
-        },
-        {
-          "name": "Coding",
-          "total_seconds": 0.468
-        }
-      ],
-      "languages": [
-        {
-          "name": "Other",
-          "total_seconds": 1496.159
-        },
-        {
-          "name": "JSON",
-          "total_seconds": 0.468
-        },
-        {
-          "name": "YAML",
-          "total_seconds": 0.0
-        }
-      ],
-      "editors": [
-        {
-          "name": "Codex Vscode",
-          "total_seconds": 875.852
-        },
-        {
-          "name": "Codex CLI",
-          "total_seconds": 620.307
-        },
-        {
-          "name": "Cursor",
-          "total_seconds": 0.468
-        }
-      ]
-    },
     {
       "range": {
         "date": "2026-11-15"
@@ -207,6 +113,46 @@
     {
       "range": {
         "date": "2026-11-19"
+      },
+      "grand_total": {
+        "total_seconds": 0.0,
+        "ai_additions": 0,
+        "ai_deletions": 0,
+        "human_additions": 0,
+        "human_deletions": 0,
+        "ai_input_tokens": 0,
+        "ai_cached_input_tokens": 0,
+        "ai_output_tokens": 0,
+        "ai_prompt_events_total": 0,
+        "ai_model_total_cost": 0
+      },
+      "categories": [],
+      "languages": [],
+      "editors": []
+    },
+    {
+      "range": {
+        "date": "2026-11-20"
+      },
+      "grand_total": {
+        "total_seconds": 0.0,
+        "ai_additions": 0,
+        "ai_deletions": 0,
+        "human_additions": 0,
+        "human_deletions": 0,
+        "ai_input_tokens": 0,
+        "ai_cached_input_tokens": 0,
+        "ai_output_tokens": 0,
+        "ai_prompt_events_total": 0,
+        "ai_model_total_cost": 0
+      },
+      "categories": [],
+      "languages": [],
+      "editors": []
+    },
+    {
+      "range": {
+        "date": "2026-11-21"
       },
       "grand_total": {
         "total_seconds": 0.0,
